@@ -35,20 +35,20 @@ void StudentsBook::loadFromFile(ifstream& file) {
 }
 
 void StudentsBook::addElement() {
-    cout << "Введите название учебника: ";
+    cout << "Vvedite nazvanie uchebnika: ";
     getline(cin, title);
-    cout << "Введите автора: ";
+    cout << "Vvedite avtora: ";
     getline(cin, author);
-    cout << "Введите год выпуска: ";
+    cout << "Vvedite god vypuska: ";
     cin >> year;
     cin.ignore();
-    cout << "Введите для какого учебного заведения предназначено: ";
+    cout << "Vvedite dlya kakogo uchebnogo zavedeniya prednaznacheno: ";
     getline(cin, institution);
-    cout << "Введите год обучения: ";
+    cout << "Vvedite god obucheniya: ";
     cin >> studyYear;
-    cout << "Введите объем страниц: ";
+    cout << "Vvedite ob'yem stranits: ";
     cin >> pages;
-    cout << "Введите стоимость: ";
+    cout << "Vvedite stoimost: ";
     cin >> price;
     cin.ignore();
 }
@@ -61,59 +61,59 @@ void StudentsBook::deleteElement() {
     studyYear = 0;
     pages = 0;
     price = 0.0;
-    cout << "Учебник удален." << endl;
+    cout << "Uchebnik udalen." << endl;
 }
 
 void StudentsBook::edit() {
     int choice;
-    cout << "Изменение канцелярии:" << endl;
-    cout << "1. Изменить названия" << endl;
-    cout << "2. Изменить автора" << endl;
-    cout << "3. Изменить год выпуска" << endl;
-    cout << "4. Изменить для какого учебного заведения предназначено" << endl;
-    cout << "5. Изменить год обучения" << endl;
-    cout << "6. Изменить объем страниц" << endl;
-    cout << "7. Изменить стоимость" << endl;
-    cout << "Выберите, что хотите изменить: ";
+    cout << "Izmenenie kantselyarii:" << endl;
+    cout << "1. Izmenit nazvaniya" << endl;
+    cout << "2. Izmenit avtora" << endl;
+    cout << "3. Izmenit god vypuska" << endl;
+    cout << "4. Izmenit dlya kakogo uchebnogo zavedeniya prednaznacheno" << endl;
+    cout << "5. Izmenit god obucheniya" << endl;
+    cout << "6. Izmenit ob'yem stranits" << endl;
+    cout << "7. Izmenit stoimost" << endl;
+    cout << "Vybirite, chto khotite izmenit: ";
     cin >> choice;
     cin.ignore();
 
     switch (choice) {
         case 1:
-            cout << "Введите новое название: ";
+            cout << "Vvedite novoe nazvanie: ";
             getline(cin, title);
             break;
         case 2:
-            cout << "Введите нового автора: ";
+            cout << "Vvedite novogo avtora: ";
             getline(cin, author);
             break;
         case 3:
-            cout << "Введите год: ";
+            cout << "Vvedite god: ";
             cin >> year;
             cin.ignore();
             break;
         case 4:
-            cout << "Введите новое предназначение: ";
+            cout << "Vvedite novoe prednaznachenie: ";
             getline(cin, institution);
             break;
         case 5:
-            cout << "Введите новый учебный год: ";
+            cout << "Vvedite novyy uchebnYY god: ";
             cin >> studyYear;
             cin.ignore();
             break;
         case 6:
-            cout << "Введите новое кол-во страниц: ";
+            cout << "Vvedite novoje kol-vo stranits: ";
             cin >> pages;
             cin.ignore();
             break;
         case 7:
-            cout << "Введите новую цену: ";
+            cout << "Vvedite novuyu tsenu: ";
             cin >> price;
             cin.ignore();
             break;
 
         default:
-            cout << "Неверный выбор!" << endl;
+            cout << "Nevernyy vybor!" << endl;
             break;
     }
 }

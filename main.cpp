@@ -41,31 +41,30 @@ int main() {
     Keeper keeper;
     int c;
     do {
-        setlocale(LC_ALL, "russian");
         printf("==========================================\n");
-        printf("__________ПОЛЬЗОВАТЕЛЬСКОЕ МЕНЮ:__________\n");
-        printf(">> Введите '1' если вы хотите редактировать определенный набор\n");
-        printf(">> Введите '2' для сохранения keeper\n");
-        printf(">> Введите '3' для загрузки keeper из библиотеки имеющихся\n");
-        printf(">> Введите '-1' для выхода из программы\n");
+        printf("__________POL'ZOVATEL'SKOE MENYU:__________\n");
+        printf(">> Vvedite '1' esli vy khotite redaktirovat' opredelennyy nabor\n");
+        printf(">> Vvedite '2' dlya sokhraneniya keeper\n");
+        printf(">> Vvedite '3' dlya zagruzki keeper iz biblioteki imeyushchikhsya\n");
+        printf(">> Vvedite '-1' dlya vykhoda iz programmi\n");
         cin >> c;
         switch (c) {
             case 1: {
                 int c1;
                 do {
-                    printf(">> Введите '1' для добавления элемента\n");
-                    printf(">> Введите '2' для удаления элемента\n");
-                    printf(">> Введите '3' для изменения определенного элемента\n");
-                    printf(">> Введите '0' для возврата в главное меню\n");
+                    printf(">> Vvedite '1' dlya dobavleniya elementa\n");
+                    printf(">> Vvedite '2' dlya udaleniya elementa\n");
+                    printf(">> Vvedite '3' dlya izmeneniya opredelennogo elementa\n");
+                    printf(">> Vvedite '0' dlya vozvrata v glavnoe menyu\n");
 
                     cin >> c1;
                     switch (c1) {
                         case 1: {
                             int type;
-                            printf("Выберите тип объекта для добавления:\n");
-                            printf("Введите '1' - Книга\n");
-                            printf("Введите '2' - Учебник\n");
-                            printf("Введите '3' - Канцелярия\n");
+                            printf("Vyberite tip ob'ekta dlya dobavleniya:\n");
+                            printf("Vvedite '1' - Kniga\n");
+                            printf("Vvedite '2' - Uchebnik\n");
+                            printf("Vvedite '3' - Kantselyariya\n");
                             cin >> type;
                             cin.ignore();  // Игнорировать символ новой строки
 
@@ -92,14 +91,14 @@ int main() {
                                     break;
                                 }
                                 default:
-                                    printf("Неверный выбор!\n");
+                                    printf("Nevernyy vybor!\n");
                                     break;
                             }
                             break;
                         }
                         case 2: {
                             keeper.printAll();
-                            printf("Введите индекс элемента для удаления: ");
+                            printf("Vvedite indeks elementa dlya udalenya: ");
                             int index;
                             cin >> index;
 //                            if (index >= 0 && index < keeper.getSize()) {
@@ -115,7 +114,7 @@ int main() {
 
                         case 3: {
                             keeper.printAll();
-                            printf("Введите индекс элемента для изменения: ");
+                            printf("Vvedite indeks elementa dlya izmeneniya: ");
                             int index;
                             cin >> index;
                             keeper.edit(index);
@@ -125,7 +124,7 @@ int main() {
                         case 0:
                             break;
                         default:
-                            printf("Неверный ввод! Попробуйте снова.\n");
+                            printf("Nevernyy vvod! Poprobuyte snova.\n");
                             break;
                     }
                 } while (c1 != 0);
@@ -133,23 +132,23 @@ int main() {
             }
             case 2: {
                 string filename;
-                printf("Введите имя файла для сохранения: ");
+                printf("Vvedite imya fayla dlya sokhraneniya: ");
                 cin >> filename;
                 keeper.saveToFile(filename);
                 break;
             }
             case 3: {
                 string filename;
-                printf("Введите имя файла-keeper для загрузки: ");
+                printf("Vvedite imya fayla-keeper dlya zagruzki: ");
                 cin >> filename;
                 keeper.loadFromFile(filename);
                 break;
             }
             case -1:
-                printf("Выход из программы...\n");
+                printf("Vykhod iz programmy...\n");
                 break;
             default:
-                printf("Неверный ввод! Попробуйте снова.\n");
+                printf("Nevernyy vvod! Poprobuyte snova.\n");
                 break;
 
         }

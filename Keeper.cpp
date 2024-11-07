@@ -108,6 +108,6 @@ void Keeper::edit(int index) {
         BaseClass* item = items[index];
         item->edit();
     } else {
-        std::cout << "Такого индекса нет" << std::endl;
+        std::cout << "Takogo indeksa net" << std::endl;
     }
 }

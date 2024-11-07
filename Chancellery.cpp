@@ -24,13 +24,13 @@ void Chancellery::loadFromFile(std::ifstream& file) {
 }
 
 void Chancellery::addElement() {
-    cout << "Введите тип канцелярии: ";
+    cout << "Vvedite tip kantselyarii: ";
     getline(cin, type);
-    printf("Введите цвет %s: ", type.c_str());
+    printf("Vvedite tsvet %s: ", type.c_str());
     getline(cin, color);
-    cout << "Введите название книги: ";
+    cout << "Vvedite nazvanie knigi: ";
     getline(cin, purpose);
-    cout << "Введите цена: ";
+    cout << "Vvedite tsena: ";
     cin >> price;
     cin.ignore();
 }
@@ -40,40 +40,40 @@ void Chancellery::deleteElement() {
     color = "";
     purpose = "";
     price = 0.0;
-    cout << "Канцелярка удалена." << endl;
+    cout << "Kantselyarka udalena." << endl;
 }
 
 void Chancellery::edit() {
     int choice;
-    cout << "Изменение канцелярии:" << endl;
-    cout << "1. Изменить тип" << endl;
-    cout << "2. Изменить цвет" << endl;
-    cout << "3. Изменить назначение" << endl;
-    cout << "4. Изменить стоимость" << endl;
-    cout << "Выберите, что хотите изменить: ";
+    cout << "Izmenenie kantselyarii:" << endl;
+    cout << "1. Izmenit' tip" << endl;
+    cout << "2. Izmenit' tsvet" << endl;
+    cout << "3. Izmenit' naznachenie" << endl;
+    cout << "4. Izmenit' stoimost' " << endl;
+    cout << "Vyberite, chto khotite izmenit': ";
     cin >> choice;
     cin.ignore();
 
     switch (choice) {
         case 1:
-            cout << "Введите новый тип: ";
+            cout << "Vvedite novyy tip: ";
             getline(cin, type);
             break;
         case 2:
-            cout << "Введите новый цвет: ";
+            cout << "Vvedite novyy tsvet: ";
             getline(cin, color);
             break;
         case 3:
-            cout << "Введите новое назначение: ";
+            cout << "Vvedite novoe naznachenie: ";
             getline(cin, purpose);
             break;
         case 4:
-            cout << "Введите новую стоимость: ";
+            cout << "Vvedite novuyu stoimost': ";
             cin >> price;
             cin.ignore();
             break;
         default:
-            cout << "Неверный выбор!" << endl;
+            cout << "Nevernyy vybor!" << endl;
             break;
     }
 }

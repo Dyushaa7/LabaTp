@@ -29,20 +29,20 @@ void Book::loadFromFile(std::ifstream& file) {
 }
 
 void Book::addElement() {
-    cout << "Введите название книги: ";
+    cout << "Vvedite nazvanie knigi: ";
     getline(cin, title);
-    cout << "Введите автора: ";
+    cout << "Vvedite avtora: ";  
     getline(cin, author);
-    cout << "Введите год выпуска: ";
+    cout << "Vvedite god vypuska: ";
     cin >> year;
     cin.ignore();
-    cout << "Введите аннотацию: ";
+    cout << "Vvedite annotatsiyu: ";
     getline(cin, annotation);
-    cout << "Введите жанр: ";
+    cout << "Vvedite zhanr: ";  
     getline(cin, genre);
-    cout << "Введите объем страниц: ";
+    cout << "Vvedite ob'yem stranits: ";  
     cin >> pages;
-    cout << "Введите стоимость: ";
+    cout << "Vvedite stoimost: ";  
     cin >> price;
     cin.ignore();
 }
@@ -55,58 +55,58 @@ void Book::deleteElement() {
     genre = "";
     pages = 0;
     price = 0.0;
-    cout << "Книга удалена." << endl;
+    cout << "Kniga udalena." << endl;  
 }
 
 void Book::edit() {
     int choice;
-    cout << "Изменение канцелярии:" << endl;
-    cout << "1. Изменить названия" << endl;
-    cout << "2. Изменить автора" << endl;
-    cout << "3. Изменить год выпуска" << endl;
-    cout << "4. Изменить аннотацию" << endl;
-    cout << "5. Изменить жанр" << endl;
-    cout << "6. Изменить объем страниц" << endl;
-    cout << "7. Изменить стоимость" << endl;
-    cout << "Выберите, что хотите изменить: ";
+    cout << "Izmenenie kantselyarii:" << endl;  
+    cout << "1. Izmenit nazvaniya" << endl;  
+    cout << "2. Izmenit avtora" << endl;  
+    cout << "3. Izmenit god vypuska" << endl;  
+    cout << "4. Izmenit annotatsiyu" << endl;  
+    cout << "5. Izmenit zhanr" << endl;  
+    cout << "6. Izmenit ob'yem stranits" << endl;  
+    cout << "7. Izmenit stoimost" << endl;  
+    cout << "Viberite, chto khotite izmenit: ";  
     cin >> choice;
     cin.ignore();
 
     switch (choice) {
         case 1:
-            cout << "Введите новое название: ";
+            cout << "Vvedite novoe nazvanie: ";  
             getline(cin, title);
             break;
         case 2:
-            cout << "Введите нового автора: ";
+            cout << "Vvedite novogo avtora: ";  
             getline(cin, author);
             break;
         case 3:
-            cout << "Введите год: ";
+            cout << "Vvedite god: ";  
             cin >> year;
             cin.ignore();
             break;
         case 4:
-            cout << "Введите новую аннотацию: ";
+            cout << "Vvedite novuyu annotatsiyu: ";  
             getline(cin, annotation);
             break;
         case 5:
-            cout << "Введите жанр: ";
+            cout << "Vvedite zhanr: ";  
             getline(cin, genre);
             break;
         case 6:
-            cout << "Введите год: ";
+            cout << "Vvedite god: ";  
             cin >> pages;
             cin.ignore();
             break;
         case 7:
-            cout << "Введите год: ";
+            cout << "Vvedite god: ";  
             cin >> price;
             cin.ignore();
             break;
 
         default:
-            cout << "Неверный выбор!" << endl;
+            cout << "Nevernyy vybor!" << endl;
             break;
     }
 }
