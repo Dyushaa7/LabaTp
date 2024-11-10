@@ -19,13 +19,6 @@ public:
     void edit(int index);
 
 
-//    int getSize() const {
-//        return size;
-//    }
-//
-//    int setSize() {
-//        return size++;
-//    }
     int size;
 };
 

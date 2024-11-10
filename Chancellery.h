@@ -23,4 +23,4 @@ public:
     void edit() override;
 };
 
-#endif // CHANCELLERY_H
+#endif // CHANCELERY_H
